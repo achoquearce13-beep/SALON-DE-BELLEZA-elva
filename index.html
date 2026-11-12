@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personal | Salón de Belleza</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Salón de Belleza</h1>
+        <p>Sistema de Registro de Personal</p>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h2>Registrar Trabajador</h2>
+
+            <form id="formulario">
+                <label>Nombre completo</label>
+                <input type="text" id="nombre" required>
+
+                <label>Teléfono</label>
+                <input type="tel" id="telefono" required>
+
+                <label>Cédula de identidad</label>
+                <input type="text" id="ci" required>
+
+                <label>Especialidad o cargo</label>
+                <select id="cargo" required>
+                    <option value="">Seleccionar cargo</option>
+                    <option>Estilista</option>
+                    <option>Manicurista</option>
+                    <option>Cosmetóloga</option>
+                    <option>Especialista en cejas</option>
+                    <option>Especialista en pestañas</option>
+                    <option>Recepcionista</option>
+                    <option>Otro</option>
+                </select>
+
+                <label>Fecha de ingreso</label>
+                <input type="date" id="fecha" required>
+
+                <label>Horario de trabajo</label>
+                <select id="horario" required>
+                    <option value="">Seleccionar horario</option>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Tiempo completo</option>
+                </select>
+
+                <button type="submit" id="btnRegistrar">
+                    Registrar trabajador
+                </button>
+            </form>
+        </section>
+
+        <section class="contenedor">
+            <h2>Personal registrado</h2>
+
+            <p id="estado">Conectando con la base de datos...</p>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>C.I.</th>
+                            <th>Cargo</th>
+                            <th>Ingreso</th>
+                            <th>Horario</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaPersonal"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Salón de Belleza - Gestión de Personal</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
